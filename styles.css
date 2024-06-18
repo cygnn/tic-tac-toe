@@ -1,0 +1,89 @@
+body{
+    height: 77vh;
+}
+
+h1{
+    text-align: center;
+}
+.game-container{
+    display: flex;
+    justify-content: center;
+}
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.cell{
+    width: 12rem;
+    height: 12rem;
+}
+
+.hide{
+    display: none;
+}
+
+.modalcontainer{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.modal{
+    background-color: white;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.player-name-container{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.show{
+    display: flex;
+}
+
+.player-name-modal{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.player{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input{
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+.start{
+    border-radius: 5px;
+    height: 3rem;
+    width: 6rem;
+    font-size: 1.5rem;
+}
