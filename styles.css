@@ -1,10 +1,18 @@
 body{
-    height: 77vh;
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87CEEB ;
 }
 
 h1{
     text-align: center;
+    margin: 1rem;
+    color: #333;
 }
+
+
 .game-container{
     display: flex;
     justify-content: center;
@@ -15,11 +23,14 @@ h1{
     align-items: center;
     flex-wrap: wrap;
     width: 700px;
+    gap: 2rem;
 }
 
 .cell{
     width: 12rem;
     height: 12rem;
+    border: 5px solid #333;
+    font-size: 6rem;
 }
 
 .hide{
@@ -30,7 +41,7 @@ h1{
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
     left: 0;
@@ -41,20 +52,55 @@ h1{
 
 
 .modal{
-    background-color: white;
-    width: 600px;
-    max-width: 100%;
-    padding: 30px 50px;
+    background-color: #fff; /* White background */
+    padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow for depth */
+    max-width: 400px;
+    width: 100%;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+.modal p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.modal .winner {
+    font-weight: bold;
+    color: #3498db; /* Teal */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.modal button {
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal button.no {
+    background-color: #e74c3c; /* Red */
+}
+
+.modal button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.modal button.no:hover {
+    background-color: #c0392b; /* Darker red */
+}   
 
 .player-name-container{
     display: none;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
     left: 0;
@@ -66,24 +112,66 @@ h1{
 }
 
 .player-name-modal{
-    display: flex;
-    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow for depth */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
     gap: 3rem;
+}
+
+.player-name-modal p{
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2em;   
 }
 
 .player{
     text-align: center;
     font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-input{
-    border-radius: 5px;
-    height: 1.5rem;
+input{  
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
 }
 
 .start{
-    border-radius: 5px;
+    border-radius: 8px;
     height: 3rem;
-    width: 6rem;
+    width: 10rem;
     font-size: 1.5rem;
+    background-color: #4CAF50;
+    border: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+.start:hover{
+    background-color:#45a049;
+}
+
+
+.empty{
+    background-color: #d5e8ed;
+    
+}
+
+.x{
+    background-color: #00a8a8;
+    color: #333;
+}
+
+.o{
+    background-color: #ff6f61;
+    color: #333;
 }

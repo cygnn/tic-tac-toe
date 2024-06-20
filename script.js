@@ -209,6 +209,15 @@ function Cell() {
         cellBtn.classList.add('cell');
         cellBtn.dataset.index = i;
         cellBtn.textContent = board[i].getValue(); // Retrieve the current cell value
+        if (cellBtn.textContent === ""){
+          cellBtn.classList.add('empty')
+        }
+        else if(cellBtn.textContent.toLowerCase() === "x"){
+          cellBtn.classList.add('x')
+        }
+        else if(cellBtn.textContent.toLowerCase() === 'o'){
+          cellBtn.classList.add('o')
+        }
         cellBtn.addEventListener('click', (e) => {
           game.playRound(e.target.dataset.index);
           showBoard(); // Refresh the board after each click
